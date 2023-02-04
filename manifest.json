@@ -1,0 +1,36 @@
+{
+    "name": "ChatGPT Chat Extractor",
+    "description": "A basic chat text Extractor",
+    "version": "1.0",
+    "action": {},
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "icon32.png"
+          ],
+          "matches": ["*://chat.openai.com/*"]
+        }
+      ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.openai.com/*"],
+        "all_frames": true,
+        "js": ["contentScript.js"]
+    }],
+    "host_permissions": ["*://chat.openai.com/*"],
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "manifest_version": 3
+}
