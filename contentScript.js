@@ -23,5 +23,7 @@
         link.href = URL.createObjectURL(file);
         link.click();
     }
-    extractNewChatEventHandler();
+    if (typeof currentChatId !== 'undefined') {
+        extractNewChatEventHandler();       
+    }
 })();
