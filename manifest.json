@@ -1,7 +1,7 @@
 {
     "name": "ChatGPT Chat Extractor",
     "description": "A basic chat text Extractor",
-    "version": "0.0.12",
+    "version": "0.0.20",
     "action": {},
     "web_accessible_resources": [
         {
